@@ -1,0 +1,74 @@
+a:link, a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+
+img {
+	max-width: 100%;
+    max-height: 100%;
+}
+
+.main-wrapper {
+	display: flex;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	box-sizing: border-box;
+	border-bottom: 1px solid lightgray;
+	.content-wrapper  {
+		flex-basis: 70%;
+		.category {
+			font-family: sans-serif;
+			font-size: 14px;
+			color: #0059bf;
+		}
+
+		.headline {
+			font-size: 24px;	
+			line-height: 1.5;		
+		}
+
+		.stand-first {
+			font-size: 16px;
+			color: #606669;
+		}
+	}
+
+	.image-wrapper {
+		flex-basis: 30%;				
+		
+		.image-container {			
+			img {
+				height: auto;
+			}
+		}
+	}
+}
+
+
+// <div class="main-wrapper">
+// 	  <div class="content-wrapper">
+// 	  <div class="primary-section-route-name">${
+//       i.primarySectionRouteName || ""
+//     }</div>
+// 	<div class="headline"><a href="${i.link || ""}">${i.headline || ""}</a>
+// 	    <div class="stand-first">${i.standfirst || ""}</div>
+// 	    </div>
+// 	  </div>
+// 	  <div class="image-wrapper">
+// 		<div>
+// 		  <img width="${i.thumbnail ? i.thumbnail.width + "px" : "200"}" height="${
+//       i.thumbnail ? i.thumbnail.height + "px" : "200"
+//     }" title="${i.thumbnail ? i.thumbnail.title : ""}"
+// 			src="${
+//         i.thumbnail
+//           ? i.thumbnail.src
+//           : "https://content.api.news/v3/images/bin/7fb8522d275a99adfaa6e642ea23fa83?width=316"
+//       }"
+// 			alt=""
+// 			srcset=""
+// 		  />
+// 		</div>
+// 	  </div>
+// 	</div>
