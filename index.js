@@ -5,17 +5,14 @@ window.addEventListener("load", async function () {
   var htmlTemplate = "";
   for (let i of data.articles) {
     htmlTemplate += `<div class="main-wrapper">
-	  <div class="content-wrapper">
-	  <div class="primary-section-route-name">${
-      i.primarySectionRouteName || ""
-    }</div>
-	<div class="headline"><a href="${i.link || ""}">${i.headline || ""}</a>
-	    <div class="stand-first">${i.standfirst || ""}</div>
-	    </div>
-	  </div>
+		<div class="content-wrapper">
+			<div class="category">${i.primarySectionRouteName || ""}</div>
+			<div class="headline"><a href="${i.link || ""}">${i.headline || ""}</a></div>
+	    	<div class="stand-first">${i.standfirst || ""}</div>
+		</div>
 	  <div class="image-wrapper">
-		<div>
-		  <img width="${i.thumbnail ? i.thumbnail.width + "px" : "200"}" height="${
+		<div class="image-container">
+			<img width="${i.thumbnail ? i.thumbnail.width + "px" : "200"}" height="${
       i.thumbnail ? i.thumbnail.height + "px" : "200"
     }" title="${i.thumbnail ? i.thumbnail.title : ""}"
 			src="${
